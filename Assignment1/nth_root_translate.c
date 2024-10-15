@@ -210,7 +210,7 @@ float nthRoot(float x, int n) {
     float epsilon = 0.0001; // 計算精度
     float n_One = -1;
 
-    while (fcomparison(fabsf(my_power(guess, f_n) - x), epsilon)) {
+    while (fcomparison(fabsf(fadd32(my_power(guess, f_n), -x)), epsilon)) {
         float new_guess = fdiv32(fadd32(fmul32(fadd32(f_n, n_One), guess), fdiv32(x, my_power(guess, fadd32(f_n, n_One)))), f_n);
         if (new_guess == guess){
             // printf("%f\n",new_guess);
