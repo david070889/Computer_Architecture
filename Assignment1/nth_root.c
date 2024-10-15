@@ -4,8 +4,8 @@
 
 // 牛頓法計算 x 的 n 次方根
 float nthRoot(float x, int n) {
-    float guess = x / n; // 初始猜測值
-    float epsilon = 0.00001; // 計算精度
+    float guess = x / n; // initial guess
+    float epsilon = 0.00001; // precision
 
     while (fabs(pow(guess, n) - x) > epsilon) {
         float new_guess = ((n - 1) * guess + x / pow(guess, n - 1)) / n;
@@ -16,7 +16,6 @@ float nthRoot(float x, int n) {
         guess = new_guess;
         printf("%lf\n",guess);
     }
-
     return guess;
 }
 

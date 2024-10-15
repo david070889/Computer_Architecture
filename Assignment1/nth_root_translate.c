@@ -203,11 +203,10 @@ int f2i32(int x) {
     return ma;
 }
 
-// 牛頓法計算 x 的 n 次方根
 float nthRoot(float x, int n) {
     float f_n = (float)n;
-    float guess = fdiv32(x, f_n); // 初始猜測值
-    float epsilon = 0.0001; // 計算精度
+    float guess = fdiv32(x, f_n); // initial guess
+    float epsilon = 0.0001; // precision
     float n_One = -1;
 
     while (fcomparison(fabsf(fadd32(my_power(guess, f_n), -x)), epsilon)) {

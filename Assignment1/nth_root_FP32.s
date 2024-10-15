@@ -4,8 +4,8 @@
     root_result:    .word 0x00  # expect 21.14433 0x41A92787 
     epsilon:    .word 0x38D1B717 # close to 0.0001
     n_One:      .word 0xBF800000
-    str1:    .asciz " - th root of "    # n(input_float_val)-th root of x(root_val) is value(root_result)
-    str2:    .asciz " is "            
+    str1:    .string " - th root of "    # n(input_float_val)-th root of x(root_val) is value(root_result)
+    str2:    .string " is "            
                
 
 .text

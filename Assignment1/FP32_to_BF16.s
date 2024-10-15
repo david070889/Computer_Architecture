@@ -4,9 +4,8 @@
     output_float_val:    .word 0x00
 
 .text
-.global main
- 
-main: 
+
+FP32_to_BF16: 
     la    t0, input_float_val
     la    s10, output_float_val
     lw    t1, 0(t0) 
